@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Serket Cybersecurity</title>
+        <link>https://serket-cybersecurity.fr/tags/</link>
+        <description>Recent content in Tags on Serket Cybersecurity</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-FR</language>
+        <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ingénierie Sociale</title>
+        <link>https://serket-cybersecurity.fr/tags/ing%C3%A9nierie-sociale/</link>
+        <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/tags/ing%C3%A9nierie-sociale/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Prétextes</title>
+        <link>https://serket-cybersecurity.fr/tags/pr%C3%A9textes/</link>
+        <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/tags/pr%C3%A9textes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Sensibilisation</title>
+        <link>https://serket-cybersecurity.fr/tags/sensibilisation/</link>
+        <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/tags/sensibilisation/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ingénierie Sociale on Serket Cybersecurity</title>
+        <link>https://serket-cybersecurity.fr/tags/ing%C3%A9nierie-sociale/</link>
+        <description>Recent content in Ingénierie Sociale on Serket Cybersecurity</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-FR</language>
+        <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/tags/ing%C3%A9nierie-sociale/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ingénierie sociale: 10 exemples de prétextes employés par les attaquants</title>
+        <link>https://serket-cybersecurity.fr/posts/pretextes/pretextes/</link>
+        <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/posts/pretextes/pretextes/</guid>
+        <description>&lt;img src="https://serket-cybersecurity.fr/pretextes/banner.jpg" alt="Featured image of post Ingénierie sociale: 10 exemples de prétextes employés par les attaquants" /&gt;&lt;p&gt;En sécurité de l&amp;rsquo;information, l&amp;rsquo;&lt;strong&gt;ingénierie sociale&lt;/strong&gt; désigne l&amp;rsquo;ensemble des techniques utilisées par un attaquant pour amener une personne à &lt;strong&gt;divulguer des informations sensibles&lt;/strong&gt; ou effectuer une action particulière. On se trouve donc à l&amp;rsquo;intersection entre la &lt;strong&gt;cybersécurité&lt;/strong&gt; et la &lt;strong&gt;psychologie&lt;/strong&gt;. Les techniques déployées par les attaquants cherchant à cibler un particulier ou une entreprise sont bien souvent similaires. Par ailleurs, il y a souvent peu, voire aucune différence de techniques entre les attaques dirigées contre une personne ou l&amp;rsquo;entreprise dans laquelle elle travaille : la plupart des attaques par ingénierie sociale visant les entreprises touchent aussi les employés au sein de leur sphère privée.
+Pour se protéger, il est nécessaire de pouvoir &lt;strong&gt;reconnaître les mécanismes et techniques utilisés&lt;/strong&gt; par les acteurs malveillants. Je vous propose donc aujourd&amp;rsquo;hui de découvrir &lt;strong&gt;10 prétextes fréquemment employés&lt;/strong&gt; dans les escroqueries, les appels malveillants, ou encore les e-mails de phishing.&lt;br&gt;
+C&amp;rsquo;est parti !&lt;/p&gt;
+&lt;h3 id=&#34;1-allô--ici-le-support-informatique-nous-souhaiterions-récupérer-vos-identifiants&#34;&gt;&lt;a href=&#34;#1-all%c3%b4--ici-le-support-informatique-nous-souhaiterions-r%c3%a9cup%c3%a9rer-vos-identifiants&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. &amp;ldquo;Allô ? Ici le support informatique&amp;hellip;&amp;rdquo; Nous souhaiterions récupérer vos identifiants.
+&lt;/h3&gt;&lt;p&gt;Se faisant passer pour un membre de l&amp;rsquo;équipe informatique, un acteur malveillant peut prétendre avoir besoin d&amp;rsquo;accéder à l&amp;rsquo;ordinateur d&amp;rsquo;un utilisateur pour résoudre un problème, installer des mises à jour ou vérifier des paramètres de sécurité.
+Cela peut permettre à un attaquant de réaliser une phase de reconnaissance et récupérer des informations utiles comme les versions de logiciels utilisées, la présence d’antivirus, etc. Ou bien directement mener à une compromission, en demandant par exemple l’installation d’un logiciel malveillant.
+Cette technique est fréquemment utilisée en entreprise par des attaquants comme des pentesteurs. C&amp;rsquo;est d&amp;rsquo;ailleurs le scénario le plus souvent déroulé lors de la réalisation de campagnes de sensibilisation au phishing.&lt;br&gt;
+Dans le cadre de ces campagnes, nous envoyons un e-mail à tous les employés, semblant provenir du service informatique de l&amp;rsquo;entreprise, demandant une connexion pour terminer une mise à jour ou accéder à un nouveau service. Lorsque l&amp;rsquo;utilisateur clique sur le lien, il est redirigé sur une copie du portail de connexion des services internes, via lequel nous interceptons les identifiants de connexion renseignés.
+Pour éviter de se faire piéger, deux solutions : se connecter en recherchant le site web auquel vous voulez accéder directement dans votre navigateur ; ou vérifier la légitimité de l&amp;rsquo;e-mail en contactant votre interlocuteur par un autre canal de communication. A noter que l&amp;rsquo;utilisation de clés physiques ou biométriques comme facteur de double authentification peremttent de se protéger contre ce scénario précis. Rachel Tobac et Yubico en font une démonstration dans &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=UwPK_ietuxg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cette vidéo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pretextes/IT.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IT&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-vous-avez-gagné--le-droit-de-vous-faire-arnaquer&#34;&gt;&lt;a href=&#34;#2-vous-avez-gagn%c3%a9--le-droit-de-vous-faire-arnaquer&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;2. Vous avez gagné ! Le droit de vous faire arnaquer.
+&lt;/h3&gt;&lt;p&gt;Un incontournable de nos boîtes spam : les e-mails notifiant que vous avez gagné le dernier iPhone ou un voyage aux Bahamas via un concours auquel vous n&amp;rsquo;avez jamais participé.&lt;br&gt;
+Vous pensiez que personne ne se fait jamais avoir sur ce genre d&amp;rsquo;e-mails ? Détrompez-vous ! Non seulement ils sont efficaces, mais ils se présentent sous des formes toujours plus évoluées.&lt;br&gt;
+L&amp;rsquo;appât du gain et des opportunités est un principe efficace sur tous, et même si votre CSE ne vous a pas offert le dernier iPhone, il vous a peut-être envoyé une carte-cadeau ou invité par e-mail à un tirage au sort pour participer à un séminaire à l&amp;rsquo;étranger&amp;hellip; sous condition de remplir un formulaire en ligne et de renseigner votre numéro de passeport. Et si ce n&amp;rsquo;était pas vraiment votre CSE ?&lt;br&gt;
+Généralement, si cela semble trop beau pour être vrai, c&amp;rsquo;est bien souvent qu&amp;rsquo;il y a anguille sous roche. Pensez à réaliser une double confirmation auprès de votre interlocuteur via une autre méthode de communication et à en parler à vos collègues !&lt;/p&gt;
+&lt;h3 id=&#34;3-nous-avons-rencontré-un-problème-lors-de-la-livraison--comment-ça-vous-navez-rien-commandé-&#34;&gt;&lt;a href=&#34;#3-nous-avons-rencontr%c3%a9-un-probl%c3%a8me-lors-de-la-livraison--comment-%c3%a7a-vous-navez-rien-command%c3%a9-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;3. &amp;ldquo;Nous avons rencontré un problème lors de la livraison&amp;hellip;&amp;rdquo;  Comment ça vous n&amp;rsquo;avez rien commandé ?
+&lt;/h3&gt;&lt;p&gt;Vous attendiez un colis ? Peut-être la dernière console de jeu, les confitures de mamie ou une paire de baskets customisées ? Catastrophe ! Un SMS vous signale qu&amp;rsquo;il n&amp;rsquo;est pas arrivé jusqu&amp;rsquo;à votre boîte aux lettres pour des raisons obscures, et vous voilà paniqué, prêt à remplir n&amp;rsquo;importe quel formulaire pour récupérer votre précieuse commande. Mais voilà, votre colis n&amp;rsquo;a même pas encore été expédié et ce SMS ne provient pas du service de livraison, mais d&amp;rsquo;un attaquant à la recherche d&amp;rsquo;informations personnelles et autres coordonnées bancaires.&lt;br&gt;
+Le scénario du livreur est aussi un prétexte couramment employé par les auditeurs lors de missions de test d&amp;rsquo;intrusion physique dont le but est de s&amp;rsquo;introduire dans les locaux d&amp;rsquo;une entreprise. Les bras chargés de cartons, un faux formulaire de livraison à la main, le costume adéquat, et un employé aimable retient la porte, nous permettant d&amp;rsquo;entrer dans l&amp;rsquo;enceinte des locaux. Il ne reste plus qu&amp;rsquo;à trouver un poste déverrouillé ou une prise réseau sur le chemin des toilettes&amp;hellip;&lt;br&gt;
+Tout cela dans le but de brancher une clef USB malveillante, un faux câble de chargement ou un implant réseau sur les prises Ethernet, permettant de s’introduire sur le réseau interne de l’entreprise et de communiquer à distance avec le poste d’un attaquant. Comment se protéger de ce scénario ? Consultez directement le statut de livraison de vos colis via le site web officiel du transporteur, sans cliquer sur le lien. De même, n&amp;rsquo;hésitez pas à poser des questions aux livreurs ou aux inconnus (au comportement suspect ?) se baladant dans les locaux de votre entreprise.&lt;/p&gt;
+&lt;h3 id=&#34;4-convocation-au-tribunal-on-peut-peut-être-sarranger&#34;&gt;&lt;a href=&#34;#4-convocation-au-tribunal-on-peut-peut-%c3%aatre-sarranger&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;4. Convocation au tribunal. On peut peut-être s&amp;rsquo;arranger&amp;hellip;
+&lt;/h3&gt;&lt;p&gt;Vous avez des secrets, peut-être quelque chose à vous reprocher ? Ou pas ? Peu importe, voici une illustration du principe d&amp;rsquo;autorité dans toute sa splendeur qui ferait douter le plus irréprochable d&amp;rsquo;entre nous.
+Un mail contenant un document PDF, bleu blanc rouge, convocation au tribunal pour détention d&amp;rsquo;images illicites, ou bien un SMS notifiant d&amp;rsquo;une amende impayée, un retard de payement d&amp;rsquo;impôts, etc. C&amp;rsquo;est certainement une erreur ! Vous cherchez à rétablir la vérité et à éviter les conséquences fâcheuses suggérées par le message que vous venez de recevoir. Mais ici encore, ce n&amp;rsquo;est que poudre aux yeux. Les attaquants peuvent prétendre appartenir à un organisme gouvernemental ou aux forces de l&amp;rsquo;ordre, dans le but de susciter l&amp;rsquo;anxiété chez la personne ciblée et l&amp;rsquo;inciter à effectuer un paiement ou à renseigner des informations personnelles.
+(P.S : Je vous invite à visionner la &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/i/status/1708879712733352339&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;vidéo de sensibilisation de la gendarmerie nationale&lt;/a&gt; à ce sujet)
+Dans le milieu professionnel, vous ne recevrez peut-être pas d&amp;rsquo;e-mail de la gendarmerie, mais peut-être une pièce jointe énigmatique accompagnant un message très court d&amp;rsquo;un faux client, ou un fichier Excel semblant provenir de la direction et contenant les salaires de tous les employés de l&amp;rsquo;entreprise&amp;hellip; La tentation d&amp;rsquo;ouvrir est forte, celle d&amp;rsquo;activer les macros Office pour pouvoir visualiser le document encore plus. Mais voilà, le fichier contient du code malveillant qui va s&amp;rsquo;exécuter sur votre machine et donner un accès total à l&amp;rsquo;attaquant.
+Pour éviter les erreurs, vérifiez l&amp;rsquo;expéditeur du message et n&amp;rsquo;hésitez pas à recourir à la double confirmation en cas de doute !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pretextes/gendarme.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;gendarme&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;5-urgent-besoin-de-vos-informations-bancaires&#34;&gt;&lt;a href=&#34;#5-urgent-besoin-de-vos-informations-bancaires&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;5. [URGENT] Besoin de vos informations bancaires.
+&lt;/h3&gt;&lt;p&gt;Au cours d&amp;rsquo;une attaque par ingénierie sociale, les attaquants cherchent à contourner le processus de réflexion logique de leur cible. Pour cela, ajouter une pression supplémentaire sous la forme d&amp;rsquo;une notion d&amp;rsquo;urgence est extrêmement efficace : pas le temps de réfléchir, il faut décider tout de suite.&lt;br&gt;
+Les acteurs malveillants créent de toutes pièces des scénarios d&amp;rsquo;urgence, comme un membre de la famille en détresse ou un besoin médical soudain, pour susciter des réactions émotionnelles fortes et contraindre leurs victimes à agir immédiatement.&lt;br&gt;
+Dans la sphère professionnelle, on retrouve les notions d&amp;rsquo;urgence un peu partout : au travail, tout est toujours urgent. Quoi de plus normal que de recevoir un appel du service financier prétendant qu&amp;rsquo;il y a une erreur sur votre fiche de paie, que tout doit être envoyé d&amp;rsquo;ici quelques heures et que vous devez renseigner les informations manquantes sous peine de ne pas être payé ce mois-ci ? Attendez&amp;hellip; A quel moment cette nouvelle comptable a-t-elle intégré le service ? Je ne reconnais pas son nom&amp;hellip;&lt;br&gt;
+Le meilleur moyen de se protéger de la notion d&amp;rsquo;urgence, c&amp;rsquo;est de respirer et de prendre son temps&amp;hellip; ce qui n&amp;rsquo;est pas toujours possible. Pour éviter les problèmes, pensez à contacter votre interlocuteur par un autre intermédiaire pour confirmer la légitimité du message.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pretextes/compta.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;compta&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;6-insérer-une-image-de-chaton-ici-vous-auriez-pas-un-grand-coeur-par-hasard-&#34;&gt;&lt;a href=&#34;#6-ins%c3%a9rer-une-image-de-chaton-ici-vous-auriez-pas-un-grand-coeur-par-hasard-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;6. &amp;lt;Insérer une image de chaton ici&amp;gt; Vous auriez pas un grand coeur par hasard ?
+&lt;/h3&gt;&lt;p&gt;Reliée à la notion d&amp;rsquo;urgence, chaque grande catastrophe est exploitée par les attaquants pour profiter de notre charité. Se faisant passer pour une organisation caritative ou une collecte de fonds, les acteurs malveillants sollicitent des dons ou des informations personnelles sous prétexte d&amp;rsquo;aider une bonne cause.&lt;br&gt;
+Plus généralement, l&amp;rsquo;humain est poussé par son désir d&amp;rsquo;aider et d&amp;rsquo;être utile, c&amp;rsquo;est ainsi qu&amp;rsquo;on va tenir la porte à un livreur chargé de colis ou accepter d&amp;rsquo;aider un nouveau stagiaire en lui présentant le dernier projet sur lequel on a travaillé, évidemment sans en retirer les informations confidentielles.&lt;br&gt;
+Alors, comment faire ? Rester ingrat et égoïste ? Rien ne vous empêche de donner un coup de main, c&amp;rsquo;est toujours plaisant ! Pensez juste à vérifier la légitimité des demandes ou les habilitations de l’interlocuteur. Personne ne vous en voudra d&amp;rsquo;être soucieux de bien faire en rendant service (ou alors, c&amp;rsquo;est suspect).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pretextes/chaton.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Chaton&#34;
+	
+	
+&gt;
+&lt;em&gt;Alleeez&amp;hellip; Vous auriez pas un petit mot de passe pour moi ?&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;7-activité-suspecte-ou-comment-prédire-lavenir&#34;&gt;&lt;a href=&#34;#7-activit%c3%a9-suspecte-ou-comment-pr%c3%a9dire-lavenir&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;7. Activité suspecte ou comment prédire l&amp;rsquo;avenir
+&lt;/h3&gt;&lt;p&gt;En prétendant appartenir à une organisation légitime (par exemple, une banque, un service de messagerie ou un réseau social), les attaquants peuvent prétendre qu&amp;rsquo;il y a eu une activité suspecte sur votre compte et demander des informations de connexion pour &lt;del&gt;vérification&lt;/del&gt; réaliser une activité suspecte. Ce genre de scénario est rencontré de la même manière dans la sphère privée que professionnelle. Par exemple, cet e-mail de Microsoft reçu dans la matinée vous demandant de vous connecter sur le portail en ligne, l’expéditeur n’était pas un peu étrange ? La Banque Populaire a aussi mis en ligne des &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=aBGMYPDhvaU&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;exemples&lt;/a&gt; de conversations frauduleuses avec un faux conseiller bancaire, ce type d&amp;rsquo;arnaque étant particulièrement répandu, je vous invite à aller écouter !
+Pour se protéger de ce scénario, rien de plus simple : ne cliquez pas sur les liens contenus dans les messages, rendez-vous directement sur le site officiel via votre navigateur. Petit bonus : en cas de doute lors d&amp;rsquo;un échange, mettez fin à la conversation et recontactez votre interlocuteur par un autre moyen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pretextes/voyante.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Voyante&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;8-bonjour-comment-vas-tu---on-se-connaît-&#34;&gt;&lt;a href=&#34;#8-bonjour-comment-vas-tu---on-se-conna%c3%aet-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;8. &amp;ldquo;Bonjour, comment vas-tu ?&amp;rdquo;  On se connaît ?
+&lt;/h3&gt;&lt;p&gt;L&amp;rsquo;usurpation d&amp;rsquo;identité, sur les réseaux sociaux, par e-mail, SMS ou même lors d&amp;rsquo;appels téléphoniques, est une technique pouvant s&amp;rsquo;avérer difficile, voire très difficile, à détecter pour les personnes ciblées. Ce type d&amp;rsquo;attaque demande beaucoup de préparation à l&amp;rsquo;attaquant, qui va chercher à récolter un maximum d&amp;rsquo;informations sur vous et la personne qu&amp;rsquo;il cherche à imiter.
+Sur le plan personnel, la finalité est souvent d&amp;rsquo;obtenir de votre part une jolie somme d&amp;rsquo;argent. Sur le plan professionnel, les conséquences peuvent être variées : recherche d&amp;rsquo;informations sensibles ou de gain financier ; mais bien souvent sévères.
+Par exemple, lors d&amp;rsquo;un scénario d&amp;rsquo;escroquerie au président, l&amp;rsquo;attaquant se fait passer pour le dirigeant de la société ou un manager pour demander au service financier d&amp;rsquo;effectuer des virements importants sur le compte d&amp;rsquo;un prétendu client ou prestataire. Les techniques déployées peuvent être avancées : double contact par e-mail et appel téléphonique, utilisation d&amp;rsquo;intelligence artificielle pour imiter la voix de la personne, compromission de boîtes mail, etc. Un &lt;a class=&#34;link&#34; href=&#34;https://www.radiofrance.fr/franceinter/ia-une-arnaque-par-deepfake-a-coute-26-millions-de-dollars-a-une-entreprise-de-hong-kong-1799286&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;exemple impressionnant&lt;/a&gt; a eu lieu en 2024 à Hong Kong, où les attaquants ont subtilisé 26 millions de dollars grâce à cette technique.&lt;br&gt;
+Pour se protéger de l&amp;rsquo;usurpation d&amp;rsquo;identité, il est préférable de limiter les informations disponibles à votre sujet sur internet et les réseaux sociaux. De même, restez vigilants concernant toute demande qui sortirait du cadre habituel et demandez confirmation à votre interlocuteur par un autre moyen de communication.&lt;/p&gt;
+&lt;h3 id=&#34;9-roméo-na-pas-besoin-de-connaître-vos-projets-&#34;&gt;&lt;a href=&#34;#9-rom%c3%a9o-na-pas-besoin-de-conna%c3%aetre-vos-projets-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;9. Roméo&amp;hellip; n&amp;rsquo;a pas besoin de connaître vos projets !
+&lt;/h3&gt;&lt;p&gt;Lorsqu&amp;rsquo;il s&amp;rsquo;agit d&amp;rsquo;obtenir des informations sensibles, certains attaquants ne reculent devant rien et n&amp;rsquo;hésitent pas à recourir à des techniques pouvant avoir un impact désastreux sur le bien-être psychologique de leur cible. C&amp;rsquo;est ce qui va les différencier d&amp;rsquo;un ingénieur social &amp;ldquo;white hat&amp;rdquo; qui respecte des limites éthiques strictes et cherche à laisser un impact positif chez les personnes dans une optique de sensibilisation.
+Les escroqueries sentimentales sont malheureusement monnaie courante et menées par des acteurs malveillants pouvant chercher le gain financier ou l&amp;rsquo;accès à des données sensibles par le biais de l&amp;rsquo;élicitation. L&amp;rsquo;élicitation désigne l&amp;rsquo;ensemble des méthodes permettant d&amp;rsquo;extraire subtilement une information d&amp;rsquo;un individu ou d&amp;rsquo;un groupe sans éveiller les soupçons. Cela regroupe un ensemble de techniques rhétoriques, de persuasion et une attention particulière au contexte et aux apparences.
+Ce type d&amp;rsquo;attaque s&amp;rsquo;étale souvent sur de longues périodes de temps, pour que l&amp;rsquo;attaquant puisse construire une relation de confiance avec sa victime, et l&amp;rsquo;amener à baisser la garde et divulguer des informations sensibles sans qu&amp;rsquo;elle en ait conscience. Un exemple réel de ce type d&amp;rsquo;attaque avancée est le cas &lt;a class=&#34;link&#34; href=&#34;https://www.proofpoint.com/us/blog/threat-insight/i-knew-you-were-trouble-ta456-targets-defense-contractor-alluring-social-media&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Marcella Flores&lt;/a&gt; (article en anglais), cherchant à obtenir des informations auprès d&amp;rsquo;employés du secteur aéraunotique.
+Se protéger de l&amp;rsquo;élicitation peut parfois être complexe, cela requiert principalement d&amp;rsquo;être conscient des risques. La meilleure défense reste donc l&amp;rsquo;information et la connaissance de l&amp;rsquo;existence de ce type d&amp;rsquo;attaques. Pour en limiter la possibilité, avoir une bonne gestion des informations publiques disponibles à votre sujet et protéger votre vie privée est un bon point de départ.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pretextes/romeo.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Romeo&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Spoiler : Roméo et Juliette ça ne se finit pas très bien &amp;hellip;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;10-vous-voulez-donner-votre-avis--donnez-plutôt-vos-informations-personnelles-&#34;&gt;&lt;a href=&#34;#10-vous-voulez-donner-votre-avis--donnez-plut%c3%b4t-vos-informations-personnelles-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;10. Vous voulez donner votre avis ? Donnez plutôt vos informations personnelles !
+&lt;/h3&gt;&lt;p&gt;Besoin d&amp;rsquo;une information ? Il suffit de demander ! Cela semble presque trop facile, les attaquants peuvent imiter des enquêtes ou des études de recherche, demandant aux victimes de fournir des informations personnelles sous couvert de recueillir des commentaires ou de mener des études de marché. Informations qui peuvent être utilisées par la suite pour mener des attaques plus avancées comme l&amp;rsquo;usurpation d&amp;rsquo;identité.&lt;br&gt;
+Soyez toujours vigilants quant aux informations que vous soumettez dans les formulaires et pensez à vérifier l&amp;rsquo;identité de l&amp;rsquo;expéditeur du questionnaire.&lt;/p&gt;
+&lt;h2 id=&#34;bonus--comment-se-protéger-des-attaques-par-ingénierie-sociale-&#34;&gt;&lt;a href=&#34;#bonus--comment-se-prot%c3%a9ger-des-attaques-par-ing%c3%a9nierie-sociale-&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Bonus : comment se protéger des attaques par ingénierie sociale ?
+&lt;/h2&gt;&lt;p&gt;Mais alors, tout le monde cherche en permanence à nous piéger ? Faut-il devenir paranoïaque ? Ne vous inquiétez pas, il suffit de prendre quelques bonnes habitudes de sécurité pour ne plus tomber dans les pièges tendus par les attaquants et vivre l&amp;rsquo;esprit tranquille. Voici des recommandations générales :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sensibiliser et s&amp;rsquo;informer&lt;/strong&gt; : ce n&amp;rsquo;est qu&amp;rsquo;en connaissant les techniques et mécanismes d&amp;rsquo;ingénierie sociale que l&amp;rsquo;on peut apprendre à les reconnaitre et à s&amp;rsquo;en protéger !&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Appliquer les bonnes pratiques techniques&lt;/strong&gt; en termes de cybersécurité : installer les mises à jour, utiliser des mécanismes de protection (antispam, antivirus), adopter une politique de mots de passe robuste, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ne pas cliquer&lt;/strong&gt; sur les liens contenus dans les e-mails, ni ouvrir les pièces-jointes, sans s&amp;rsquo;assurer au préalable de leur légitimité.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sécuriser ses comptes&lt;/strong&gt; : choisir des mots de passe longs, uniques, sans lien avec vous, et activer l&amp;rsquo;authentification à double facteur pour éviter que quelqu&amp;rsquo;un d&amp;rsquo;autre ne se connecte à votre place !&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Limiter les informations disponibles&lt;/strong&gt; à votre sujet sur Internet : plus un attaquant a d&amp;rsquo;informations sur vous, plus vous êtes vulnérable aux attaques par ingénierie sociale et à l&amp;rsquo;usurpation d&amp;rsquo;identité.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Réaliser une double vérification&lt;/strong&gt; : contacter son interlocuteur par un autre moyen de communication pour vérifier l&amp;rsquo;information en cas de doute.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Faire preuve d&amp;rsquo;esprit critique&lt;/strong&gt; : les attaquants cherchent à faire appel aux émotions pour contourner votre processus de réflexion logique, restez donc attentifs à vos réactions, une forte émotion peut signifier que vous avez flairé l&amp;rsquo;escroquerie.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Signaler les comportements suspects&lt;/strong&gt; : vous venez de cliquer sur un lien malveillant ? Ou de répondre à une demande sortant du cadre habituel ? N&amp;rsquo;hésitez pas à le signaler ! Plus la réaction défensive est initiée rapidement, moins les conséquences sont lourdes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Surveiller les fuites de données&lt;/strong&gt; : par exemple en vérifiant si vos identifiants ne se sont pas retrouvés dans une fuite de données grâce à des services comme &lt;a class=&#34;link&#34; href=&#34;https://haveibeenpwned.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;have I been pwned&lt;/a&gt; ou en recourant à des services spécialisés pour les entreprises.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Vous souhaitez en savoir plus sur l&amp;rsquo;&lt;strong&gt;ingénierie sociale&lt;/strong&gt; ? Allez jeter un coup d&amp;rsquo;œil aux autres articles de ce blog. :-)&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
