@@ -6,7 +6,31 @@
         <description>Recent content in Tags on Serket Cybersecurity</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>fr-FR</language>
-        <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Infrastructure</title>
+        <link>https://serket-cybersecurity.fr/tags/infrastructure/</link>
+        <pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/tags/infrastructure/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>MacOS</title>
+        <link>https://serket-cybersecurity.fr/tags/macos/</link>
+        <pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/tags/macos/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Pentest</title>
+        <link>https://serket-cybersecurity.fr/tags/pentest/</link>
+        <pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/tags/pentest/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Ingénierie Sociale</title>
         <link>https://serket-cybersecurity.fr/tags/ing%C3%A9nierie-sociale/</link>
         <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>

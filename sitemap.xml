@@ -3,12 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://serket-cybersecurity.fr/</loc>
-    <lastmod>2025-02-15T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://serket-cybersecurity.fr/pages/a-propos/about/</loc>
-    <lastmod>2025-02-15T00:00:00+01:00</lastmod>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://serket-cybersecurity.fr/categories/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/posts/pentestenv/environnement-de-pentest-sous-macos/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/infrastructure/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/macos/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/pentest/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/categories/pentest/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/posts/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/</loc>
+    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/pages/a-propos/about/</loc>
     <lastmod>2025-02-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://serket-cybersecurity.fr/tags/ing%C3%A9nierie-sociale/</loc>
@@ -20,9 +41,6 @@
     <loc>https://serket-cybersecurity.fr/pages/</loc>
     <lastmod>2025-02-15T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://serket-cybersecurity.fr/posts/</loc>
-    <lastmod>2025-02-15T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://serket-cybersecurity.fr/tags/pr%C3%A9textes/</loc>
     <lastmod>2025-02-15T00:00:00+01:00</lastmod>
   </url><url>
@@ -30,9 +48,6 @@
     <lastmod>2025-02-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://serket-cybersecurity.fr/categories/sensibilisation/</loc>
-    <lastmod>2025-02-15T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://serket-cybersecurity.fr/tags/</loc>
     <lastmod>2025-02-15T00:00:00+01:00</lastmod>
   </url>
 </urlset>

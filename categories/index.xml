@@ -6,7 +6,15 @@
         <description>Recent content in Categories on Serket Cybersecurity</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>fr-FR</language>
-        <lastBuildDate>Sat, 15 Feb 2025 00:00:00 +0100</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Pentest</title>
+        <link>https://serket-cybersecurity.fr/categories/pentest/</link>
+        <pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/categories/pentest/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Sensibilisation</title>
         <link>https://serket-cybersecurity.fr/categories/sensibilisation/</link>
         <pubDate>Sat, 15 Feb 2025 00:00:00 +0100</pubDate>

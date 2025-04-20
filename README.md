@@ -1,1 +1,0 @@
-# serket-cybersecurity.github.io

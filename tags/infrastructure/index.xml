@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Infrastructure on Serket Cybersecurity</title>
+        <link>https://serket-cybersecurity.fr/tags/infrastructure/</link>
+        <description>Recent content in Infrastructure on Serket Cybersecurity</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>fr-FR</language>
+        <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Environnement de Pentest sous MacOS</title>
+        <link>https://serket-cybersecurity.fr/posts/pentestenv/environnement-de-pentest-sous-macos/</link>
+        <pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/posts/pentestenv/environnement-de-pentest-sous-macos/</guid>
+        <description>&lt;img src="https://serket-cybersecurity.fr/pentestEnv/banner.jpg" alt="Featured image of post Environnement de Pentest sous MacOS" /&gt;&lt;p&gt;En regardant de plus près les systèmes d&amp;rsquo;exploitation installés sur les postes de pentesters, on voit souvent des distributions Linux, parfois Windows, plus rarement MacOS. Cependant, toutes les configurations sont possibles du moment qu&amp;rsquo;on peut utiliser des machines virtuelles et/ou des conteneurs. En effet, il n&amp;rsquo;est pas recommandé d&amp;rsquo;installer directement des outils de pentest sur notre hôte (oui oui, pour des raisons de sécurité, de propreté, éviter de tout casser, tout ça tout ça 🤡). Par ailleurs, selon le type de projets sur lesquels on va être amenés à travailler, les besoins et les outils nécessaires sont différents et peuvent nécessiter le recours à plusieurs systèmes d&amp;rsquo;exploitation et distributions, d&amp;rsquo;où l&amp;rsquo;importance de rester flexible !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/Plier.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Le roseau plie&#34;
+	
+	
+&gt;
+&lt;em&gt;Le roseau plie jeune phacochère, mais ne romp jamais.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Dans cette optique, je vous propose une configuration que l&amp;rsquo;on voit peu souvent : le déploiement d&amp;rsquo;un environnement de Pentest/CTF sous MacOS équipé d&amp;rsquo;une puce Apple.
+Il y a de nombreuses façons de créer son environnement de pentest sous MacOS, celle que j’ai choisie passe par l&amp;rsquo;installation d&amp;rsquo;une VM &lt;a class=&#34;link&#34; href=&#34;https://www.kali.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Kali Linux&lt;/a&gt; sur &lt;a class=&#34;link&#34; href=&#34;https://www.parallels.com/fr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Parallels&lt;/a&gt; puis le déploiement d&amp;rsquo;&lt;a class=&#34;link&#34; href=&#34;https://exegol.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Exegol&lt;/a&gt;, afin d&amp;rsquo;avoir tous les outils nécessaires pour commencer directement à pentester 🔧.&lt;/p&gt;
+&lt;p&gt;C&amp;rsquo;est parti !
+&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/Go.jpeg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A fond les bananes&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;prérequis--outil-de-virtualisation&#34;&gt;&lt;a href=&#34;#pr%c3%a9requis--outil-de-virtualisation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Prérequis : Outil de virtualisation
+&lt;/h4&gt;&lt;p&gt;Avant de pouvoir installer une machine virtuelle, il nous faut une solution de virtualisation. Il en existe plusieurs, et le but ici n&amp;rsquo;est pas de faire un comparatif entre celles-ci. La virtualisation ayant mis un peu de temps à arriver de manière stable sur les puces Apple, j&amp;rsquo;ai choisi d&amp;rsquo;utiliser  &lt;a class=&#34;link&#34; href=&#34;https://www.parallels.com/fr/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Parallels Desktop&lt;/a&gt; qui était l&amp;rsquo;un des premiers outils à fournir une solution simple, mais malheureusement payante. Si vous souhaitez expérimenter avec une alternative gratuite, &lt;a class=&#34;link&#34; href=&#34;https://www.virtualbox.org/wiki/Downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Virtual Box&lt;/a&gt; supporte aussi les puces Apple (non testé).&lt;/p&gt;
+&lt;h4 id=&#34;déployer-une-machine-virtuelle-avec-parallels&#34;&gt;&lt;a href=&#34;#d%c3%a9ployer-une-machine-virtuelle-avec-parallels&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Déployer une machine virtuelle avec Parallels
+&lt;/h4&gt;&lt;p&gt;Une fois Parallels Desktop installé sur votre machine, il est temps de rentrer dans le vif du sujet et déployer une machine virtuelle. Parallels propose une installation rapide et simplifiée de plusieurs distributions : parmi celles-ci, on retrouve notamment Ubuntu, Debian ou Kali Linux. Ici, j&amp;rsquo;ai choisi Kali Linux, une distribution dédiée au pentest et présentant plusieurs outils pré-installés.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/install1.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;install 1&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Une fois l&amp;rsquo;installation de la VM terminée, celle-ci démarre et l&amp;rsquo;installation automatique des outils Parallels se lance.
+À la fin de cette étape, un redémarrage est nécessaire.&lt;/p&gt;
+&lt;p&gt;On peut alors terminer notre configuration en effectuant les dernières mises à jour grâce à la commande suivante :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notre VM est alors installée et prête pour le pentest ! &amp;hellip; Ou Pas ?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/Book.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Book&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;le-problème&#34;&gt;&lt;a href=&#34;#le-probl%c3%a8me&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Le problème
+&lt;/h4&gt;&lt;p&gt;Kali Linux a beau être une distribution dédiée au pentest, on se retrouve très vite à devoir installer beaucoup d&amp;rsquo;outils qui ne sont pas présents par défaut et pourtant nécessaires : BurpSuite, Bloodhound, des outils et scripts dédiés au pentest Active Directory, etc. Ce qui n&amp;rsquo;est pas très pratique, et peut vite devenir énervant si on passe plus de temps à chercher et installer des outils au lieu de se concentrer directement sur ce qui nous importe (oui, je n&amp;rsquo;ai pas beaucoup de patience).&lt;/p&gt;
+&lt;h4 id=&#34;la-solution--installer-exegol&#34;&gt;&lt;a href=&#34;#la-solution--installer-exegol&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;La solution : installer Exegol
+&lt;/h4&gt;&lt;p&gt;Exegol est un environnement de pentest complet. Il est déployable rapidement sous forme de conteneur docker, ce qui permet d’avoir un environnement dédié à chaque pentest et pouvoir le supprimer proprement à la fin. C’est un gain de temps considérable puisque tout est déjà là ! En plus, il est compatible avec l’architecture ARM, ce qui nous intéresse ici.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/Exegol.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Exegol&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Exegol offre pléthore d’avantages pour une utilisation au quotidien. En tant que pentester, je l’utilise sur la plupart de mes audits, sans besoin de machines virtuelles, d’autant plus qu’il est extrêmement facile à déployer sur Linux et beaucoup plus léger.&lt;/p&gt;
+&lt;p&gt;Pour en savoir plus sur le projet, c’est par &lt;a class=&#34;link&#34; href=&#34;https://exegol.readthedocs.io/en/latest/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ici&lt;/a&gt; !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/Miam.JPG#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Fromage Miam&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Dans le cas présent, même s&amp;rsquo;il est possible de déployer Exegol directement sous MacOS, j’ai préféré garder la machine virtuelle comme environnement de base et déployer Exegol dans celle-ci.&lt;/p&gt;
+&lt;h4 id=&#34;le-problème-n2&#34;&gt;&lt;a href=&#34;#le-probl%c3%a8me-n2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Le problème n°2
+&lt;/h4&gt;&lt;p&gt;L&amp;rsquo;espace disque disponible par défaut lors de l&amp;rsquo;installation d&amp;rsquo;une VM Kali sous Parallels est insuffisant pour installer la version full d&amp;rsquo;Exegol ( ~50Go), on va devoir apporter quelques modifications 💪.&lt;/p&gt;
+&lt;h4 id=&#34;configuration-de-la-vm&#34;&gt;&lt;a href=&#34;#configuration-de-la-vm&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Configuration de la VM
+&lt;/h4&gt;&lt;p&gt;On va d’abord s’attaquer à la configuration matérielle de la VM, définie dans le menu de configuration :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ouvrir le menu configuration et naviguer sur l’onglet &amp;ldquo;Matériel&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Vérifier la configuration &amp;ldquo;CPU et Mémoire&amp;rdquo; : on veut au minimum 2 processeurs et 4Go de mémoire (ici 8Go)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/install3.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;install2&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Puis, aller dans l&amp;rsquo;onglet &amp;ldquo;Disque dur&amp;rdquo;, cliquer sur &amp;ldquo;Avancé&amp;rdquo; puis &amp;ldquo;Propriétés&amp;rdquo; et définir la taille sur 200Go (pour être sûrs d&amp;rsquo;avoir de la place de stocker toutes nos preuves d’audit)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/install4.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;install3&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Fini ? Pas tout à fait&amp;hellip; Il nous reste encore à allouer le stockage que l&amp;rsquo;on vient de rajouter, cela se passe directement dans la VM.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ouvrir l’utilitaire &amp;ldquo;Disks&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Stopper la partition de &amp;ldquo;Swap&amp;rdquo;, format sous lequel a été ajouté le stockage supplémentaire.&lt;/li&gt;
+&lt;li&gt;Supprimer cette partition Swap, on se retrouve avec une partition non allouée.&lt;/li&gt;
+&lt;li&gt;Il est alors possible ré-allouer cet espace au  &amp;ldquo;Filesystem&amp;rdquo; en faisant clic droit sur celui-ci puis &amp;ldquo;Resize&amp;rdquo; :
+&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/resizepartition.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Resize&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;Donner les valeurs suivantes et changer la taille de la partition (ici on réserve 8Go pour garder du swap) :
+&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/resize.png#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Resize 2&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;Sélectionner les 8GB d&amp;rsquo;espace restant et cliquer sur &amp;ldquo;+&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Create Partition &amp;gt; Type &amp;ldquo;other&amp;rdquo; &amp;gt; Linux Swap Partition &amp;gt; Create&lt;/li&gt;
+&lt;li&gt;Démarrer la partition&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;On est enfin prêts pour la suite des réjouissances.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/Robe.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Robe de PQ&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;installer-exegol&#34;&gt;&lt;a href=&#34;#installer-exegol&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Installer Exegol
+&lt;/h4&gt;&lt;p&gt;Avant d&amp;rsquo;installer Exegol à proprement parler, nous allons devoir installer Docker. La documentation est fournie &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/install/debian/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ici&lt;/a&gt;, voici les étapes que j&amp;rsquo;ai suivies :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Add Docker&amp;#39;s official GPG key:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install ca-certificates curl
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo install -m &lt;span style=&#34;color:#ae81ff&#34;&gt;0755&lt;/span&gt; -d /etc/apt/keyrings
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo chmod a+r /etc/apt/keyrings/docker.asc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Add the repository to Apt sources:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb [arch=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;dpkg --print-architecture&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;. /etc/os-release &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bookworm&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; stable&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Par la suite, la &lt;a class=&#34;link&#34; href=&#34;https://exegol.readthedocs.io/en/latest/getting-started/install.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;documentation Exegol&lt;/a&gt; liste toutes les étapes nécessaires à son installation sur Linux :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# add the sudo group to the user&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo usermod -aG docker &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;id -u -n&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;reload&amp;#34; the user groups with the newly added docker group&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;newgrp docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# install pipx &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install pipx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# You can now install Exegol package from PyPI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pipx install exegol
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Ajout au PATH&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pipx ensurepath
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Run as root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;alias exegol=&amp;#34;sudo -E $(which exegol)&amp;#34;&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;source ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exegol install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Au cours de l&amp;rsquo;installation, il vous sera demandé de choisir une image. Je choisis généralement la version &lt;code&gt;full&lt;/code&gt;, qui comme son nom l&amp;rsquo;indique est la plus complète et plus stable que la &lt;code&gt;nightly&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;On peut alors créer son premier conteneur avec &lt;code&gt;Exegol start&lt;/code&gt;. N&amp;rsquo;hésitez pas à aller consulter les options possibles sur la documentation, certaines vous permettent de loguer vos actions, définir un workspace, modifier les permissions sur vos fichiers, etc. Plein de choses très utiles !&lt;/p&gt;
+&lt;p&gt;Vous voilà fin prêts à pentester le monde 🚀&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/pentestEnv/Fromage.jpg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Trésor de Fromage&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;autres-considérations&#34;&gt;&lt;a href=&#34;#autres-consid%c3%a9rations&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Autres considérations
+&lt;/h4&gt;&lt;p&gt;Même s&amp;rsquo;il est tout à fait possible d&amp;rsquo;installer directement Exegol sur MacOS et éviter de s&amp;rsquo;encombrer d&amp;rsquo;une VM, cela peut avoir quelques inconvénients. La documentation Exegol met en garde à ce sujet :&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Il est fortement conseillé d&amp;rsquo;installer Exegol sur un hôte Linux, surtout si vous prévoyez d&amp;rsquo;utiliser Exegol pour des tests de pénétration internes. En effet, Docker Desktop sur Windows et macOS manque de certaines fonctionnalités, principalement en raison de la manière dont ces systèmes d&amp;rsquo;exploitation exécutent les conteneurs Docker dans une machine virtuelle interne qui ne partage pas les interfaces réseau et les accessoires USB de l&amp;rsquo;hôte.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Cependant, il serait tout à fait envisageable de choisir une autre distribution que Kali Linux pour sa VM linux. Dans les images disponibles dans Parallels, on retrouve notamment Debian ou encore Ubuntu qui peuvent être de bonnes alternatives.&lt;/p&gt;
+&lt;h4 id=&#34;sources--ressources&#34;&gt;&lt;a href=&#34;#sources--ressources&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Sources &amp;amp; Ressources
+&lt;/h4&gt;&lt;p&gt;Parallels: &lt;a class=&#34;link&#34; href=&#34;https://kb.parallels.com/en/129758&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://kb.parallels.com/en/129758&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Documentation Exegol: &lt;a class=&#34;link&#34; href=&#34;https://exegol.readthedocs.io/en/latest/getting-started/install.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://exegol.readthedocs.io/en/latest/getting-started/install.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Installation de Docker: &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/engine/install/debian/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.docker.com/engine/install/debian/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
