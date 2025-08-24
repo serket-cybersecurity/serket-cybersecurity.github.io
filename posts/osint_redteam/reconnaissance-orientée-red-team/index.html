@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Quelles informations rechercher lors de la phase de reconnaissance d'une opération Red Team ?">
+<title>Reconnaissance orientée Red Team</title>
+
+<link rel='canonical' href='https://serket-cybersecurity.fr/posts/osint_redteam/reconnaissance-orient%C3%A9e-red-team/'>
+
+<link rel="stylesheet" href="/scss/style.min.9660755c119e16ad4f6f9c1eca2ddd1aebb0bfd916318a9c109cc0d18209d3c6.css"><meta property='og:title' content="Reconnaissance orientée Red Team">
+<meta property='og:description' content="Quelles informations rechercher lors de la phase de reconnaissance d'une opération Red Team ?">
+<meta property='og:url' content='https://serket-cybersecurity.fr/posts/osint_redteam/reconnaissance-orient%C3%A9e-red-team/'>
+<meta property='og:site_name' content='Serket Cybersecurity'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='OSINT' /><meta property='article:tag' content='Red Team' /><meta property='article:tag' content='Méthodologie' /><meta property='article:published_time' content='2025-08-24T00:00:00&#43;02:00'/><meta property='article:modified_time' content='2025-08-24T00:00:00&#43;02:00'/><meta property='og:image' content='https://serket-cybersecurity.fr/osint_RedTeam/banner.jpg' />
+<meta name="twitter:title" content="Reconnaissance orientée Red Team">
+<meta name="twitter:description" content="Quelles informations rechercher lors de la phase de reconnaissance d'une opération Red Team ?"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://serket-cybersecurity.fr/osint_RedTeam/banner.jpg' /><script defer src="https://cloud.umami.is/script.js" data-website-id="5e9b8ff4-63de-4a0b-8299-1da4a4cbd038"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "light");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Afficher le menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/serket_hu_40cb768adc3eb94f.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Serket Cybersecurity</a></h1>
+            <h2 class="site-description">Humain et cybersécurité</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://www.instagram.com/serket_cybersecurity/'
+                        target="_blank"
+                        title="Instagram"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="100px" height="100px"><path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"/></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/pages/a-propos/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>À propos</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Mode sombre</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/osint_redteam/reconnaissance-orient%C3%A9e-red-team/">
+                
+                    <img src="/osint_RedTeam/banner.jpg" loading="lazy" alt="Featured image of post Reconnaissance orientée Red Team" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/red-team/" >
+                Red Team
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/osint_redteam/reconnaissance-orient%C3%A9e-red-team/">Reconnaissance orientée Red Team</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Quelles informations rechercher lors de la phase de reconnaissance d&#39;une opération Red Team ?
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Le 24 août 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minutes de lecture
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Lors d&rsquo;une opération Red Team, la reconnaissance est une étape déterminante. C’est durant cette phase que l’on dresse un portrait aussi complet que possible de la cible afin d’identifier les opportunités d’attaque, qu’elles soient techniques ou basées sur l’ingénierie sociale, dans l’objectif d’obtenir un accès initial.</p>
+<p>Au-delà de la simple collecte d’informations, comprendre l’environnement et le fonctionnement de l’entreprise permet d’orienter efficacement les actions menées après la compromission, et de tracer les chemins les plus pertinents vers les « trophées » définis en amont.</p>
+<p>Voici une liste des principaux types d’informations que je cherche habituellement à recueillir lors de cette phase de reconnaissance.</p>
+<p>C&rsquo;est parti ! 🚀</p>
+<hr>
+<h2 id="locaux-de-lentreprise"><a href="#locaux-de-lentreprise" class="header-anchor"></a>Locaux de l&rsquo;entreprise
+</h2><p>L&rsquo;identification d&rsquo;informations sur les locaux d&rsquo;une organisation est nécessaire en amont d&rsquo;une intrusion physique. Ces informations peuvent aussi être utilisées dans le cadre d&rsquo;attaques par ingénierie sociale afin d&rsquo;aider à la construction d&rsquo;un prétexte solide.</p>
+<p>La plupart des informations listées ci-dessous peuvent être récupérées directement via des recherches en sources ouvertes, mais certaines peuvent parfois demander une phase de reconnaissance physique :</p>
+<ul>
+<li>Adresse(s)</li>
+<li>Plans des locaux</li>
+<li>Disposition des accès (entrée principale, porte fumeurs, entrée cuisines, entrepôts, etc.)</li>
+<li>Présence/absence de personnel de sécurité</li>
+<li>Localisation de l&rsquo;accueil et agent d&rsquo;accueil</li>
+<li>Accueil régulier ou non de visiteurs / prestataires externes</li>
+<li>Présence de caméras de surveillance</li>
+<li>Localisation du local à poubelles</li>
+<li>Identification de différentes zones (cantines / prestataires / industriel / entrepôts / administratif, etc.)</li>
+<li>Systèmes de contrôle d&rsquo;accès</li>
+<li>Disposition de l&rsquo;intérieur des bâtiments / bureaux (photos)</li>
+<li>Accès parking</li>
+<li>Présence de prises Ethernet / prises d’alimentation</li>
+<li>Réseaux Wi-Fi</li>
+</ul>
+<hr>
+<h2 id="situation-géographique"><a href="#situation-g%c3%a9ographique" class="header-anchor"></a>Situation géographique
+</h2><p>Avoir quelques éléments de contexte sur l&rsquo;emplacement géographique global (sans besoin d&rsquo;approfondir) est utile lors de la construction de prétextes, pour réagir rapidement lors des interactions avec les employés, ou pour prévoir de potentiels points de blocage lors d&rsquo;une intrusion physique. Les éléments principaux auxquels je prête attention sont :</p>
+<ul>
+<li>Nom des entreprises voisines</li>
+<li>Présence de travaux / événements proches</li>
+<li>Possibilité de se garer (hors parking) / points d&rsquo;observation</li>
+<li>Restaurants / cafés</li>
+</ul>
+<hr>
+<h2 id="informations-techniques---périmètre-externe"><a href="#informations-techniques---p%c3%a9rim%c3%a8tre-externe" class="header-anchor"></a>Informations techniques - périmètre externe
+</h2><p>La reconnaissance technique est une part essentielle des opérations de reconnaissance. Elle va nous permettre de déterminer si l&rsquo;exploitation d&rsquo;une faille ou d&rsquo;un service exposé est envisageable afin d&rsquo;obtenir des informations ou un accès initial.</p>
+<ul>
+<li>Domaines et sous-domaines</li>
+<li>IP et ports exposés</li>
+<li>Tenant Azure</li>
+<li>Énumération de Blobs (AWS, Azure, etc.)</li>
+<li>Accès VPN</li>
+<li>Liste des technologies utilisées (logiciels, services, marques)</li>
+<li>OS utilisé</li>
+<li>Code exposé / Open Source (GitHub, GitLab, Bitbucket, etc.)</li>
+<li>Suite bureautique (Office, Gmail, etc.)</li>
+<li>Sites et services exposés (avec version)</li>
+<li>Configuration mail</li>
+<li>Caméras de surveillance accessibles depuis Internet</li>
+<li>Serveurs accessibles depuis Internet et surface d&rsquo;exposition excessive</li>
+<li>Présence de systèmes de sécurité (WAF, firewall)</li>
+</ul>
+<p>Si certaines des informations listées ci-dessus peuvent être obtenues de manière passive via des recherches en sources ouvertes, elles ne peuvent souvent être confirmées ou approfondies qu&rsquo;avec des actions actives. Dans ce cas, je préfère ajouter les éléments intéressants ou à vérifier à une liste spécifique, sur laquelle je reviendrai à la fin des phases de reconnaissance passive si besoin.</p>
+<hr>
+<h2 id="entreprise---contexte-général"><a href="#entreprise---contexte-g%c3%a9n%c3%a9ral" class="header-anchor"></a>Entreprise - contexte général
+</h2><p>Recueillir des informations sur le contexte général de l&rsquo;entreprise sert à se familiariser avec la cible afin de construire des prétextes et scénarios d&rsquo;ingénierie sociale crédibles. Mais ce n&rsquo;est pas la seule utilité : ces informations sont par exemple nécessaires pour établir des listes de bruteforce personnalisées, effectuer des recherches de vulnérabilités sur des logiciels utilisés en interne, etc.</p>
+<ul>
+<li>Secteur d&rsquo;activité</li>
+<li>Historique</li>
+<li>Liste de mots-clés</li>
+<li>Syntaxe des emails</li>
+<li>Organisation et lien avec d&rsquo;autres filiales</li>
+<li>Chiffre d&rsquo;affaires</li>
+<li>Événements à venir ou passés</li>
+<li>Offres d&rsquo;emploi</li>
+<li>Réseaux sociaux et exposition médiatique</li>
+<li>Atmosphère de travail (corporate, détendue, avis sur l&rsquo;entreprise, etc.)</li>
+</ul>
+<hr>
+<h2 id="fuites-de-données"><a href="#fuites-de-donn%c3%a9es" class="header-anchor"></a>Fuites de données
+</h2><p>Les fuites de données peuvent parfois représenter une route simple et toute tracée vers un accès initial, sans besoin de scénario compliqué. Cela vaut toujours le coup de relever des identifiants à tester sur des accès VPN (sait-on jamais). Plus généralement, les fuites de documents ou emails internes peuvent contenir une mine d&rsquo;informations exploitables par la suite.</p>
+<ul>
+<li>Emails</li>
+<li>Documents</li>
+<li>Signatures</li>
+<li>Mots de passe</li>
+<li>Contacts</li>
+<li>Plans / photos</li>
+</ul>
+<hr>
+<h2 id="partenaires-et-prestataires"><a href="#partenaires-et-prestataires" class="header-anchor"></a>Partenaires et prestataires
+</h2><p>Sans besoin d&rsquo;approfondir à l&rsquo;extrême, relever les noms de différents prestataires, et si possible des points de contact, permet d&rsquo;élaborer des scénarios d&rsquo;ingénierie sociale crédibles.</p>
+<ul>
+<li>Informatique (web, imprimantes, logiciels utilisés, etc.)</li>
+<li>Cuisines</li>
+<li>Climatisation / chauffage</li>
+<li>Ascenseurs</li>
+<li>Ménage</li>
+<li>Architecture et bâtiments</li>
+<li>Comptabilité</li>
+<li>Cabinets de conseil / services</li>
+</ul>
+<hr>
+<h2 id="employés-et-contact"><a href="#employ%c3%a9s-et-contact" class="header-anchor"></a>Employés et contact
+</h2><p>Élément nécessaire des attaques par phishing, vishing, smishing et autres, établir une liste de contacts internes est un incontournable de la phase de reconnaissance. Une recherche sur l&rsquo;organigramme, les employés et la vie en entreprise aide notamment dans les scénarios d&rsquo;ingénierie sociale. Attention cependant à ne pas sortir du cadre professionnel lors des recherches sur les réseaux sociaux et les employés.</p>
+<ul>
+<li>Liste des employés (noms, prénoms, poste)</li>
+<li>Liste des adresses e-mail des employés</li>
+<li>Numéros de téléphone des employés</li>
+<li>Numéro de téléphone de l&rsquo;accueil</li>
+<li>Adresses e-mail de listes de diffusion (RH, contact, recrutement, support, etc.)</li>
+<li>Organigramme et identification des HVT</li>
+<li>Port d’EPI</li>
+<li>Tenue de travail / dress code</li>
+<li>Moyenne d&rsquo;âge des employés</li>
+<li>Port du badge</li>
+<li>Détail du badge</li>
+<li>Niveau de langue utilisé en interne (tutoiement, vouvoiement, etc.)</li>
+<li>Sites et services externes sur lesquels sont enregistrées les adresses e-mail professionnelles</li>
+</ul>
+<hr>
+<p>La phase de reconnaissance constitue le socle sur lequel repose toute opération Red Team. Plus elle est riche et précise, plus les scénarios d’attaque gagnent en crédibilité et en efficacité. Qu’il s’agisse d’exploiter une faille technique, de préparer une intrusion physique ou de construire un prétexte d’ingénierie sociale, chaque information collectée peut faire la différence. C’est un travail minutieux, mais qui conditionne souvent le succès des étapes suivantes.
+La liste ci-dessus se veut générique, en fonction du contexte dans lequel vous évoluez, d&rsquo;autres éléments et informations peuvent être intéressantes à creuser. En espérant que cela fournisse tout de même un bon point de départ pour vos investigations !</p>
+<p><img src="/osint_RedTeam/investigate.jpeg#article"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Always sunny"
+	
+	
+></p>
+<hr>
+<h3 id="sources--ressources"><a href="#sources--ressources" class="header-anchor"></a>Sources &amp; Ressources
+</h3><p>Vous cherchez des ressources pour en savoir plus sur l&rsquo;OSINT orienté Red Team ? Voici une petite sélection :</p>
+<ul>
+<li><a class="link" href="https://nostarch.com/practical-social-engineering"  target="_blank" rel="noopener"
+    >Practical Social Engineering : A Primer for the Ethical Hacker - by Joe Gray</a></li>
+<li><a class="link" href="https://inteltechniques.com/book1.html"  target="_blank" rel="noopener"
+    >OSINT Techniques - Resources for Uncovering Online Information - by  Michael Bazzell</a></li>
+<li>Vous retrouverez aussi plein de ressources et outils sur le site de la communauté <a class="link" href="https://osintfr.com/"  target="_blank" rel="noopener"
+    >OSINT-FR</a> !</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/osint/">OSINT</a>
+        
+            <a href="/tags/red-team/">Red Team</a>
+        
+            <a href="/tags/m%C3%A9thodologie/">Méthodologie</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Serket Cybersecurity
+    </section>
+    
+    <section class="powerby">
+        Généré avec <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

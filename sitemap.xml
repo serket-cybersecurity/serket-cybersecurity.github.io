@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://serket-cybersecurity.fr/</loc>
-    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://serket-cybersecurity.fr/categories/</loc>
-    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/m%C3%A9thodologie/</loc>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/osint/</loc>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/posts/</loc>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/posts/osint_redteam/reconnaissance-orient%C3%A9e-red-team/</loc>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/red-team/</loc>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/categories/red-team/</loc>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://serket-cybersecurity.fr/tags/</loc>
+    <lastmod>2025-08-24T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://serket-cybersecurity.fr/posts/pentestenv/environnement-de-pentest-sous-macos/</loc>
     <lastmod>2025-04-20T00:00:00+02:00</lastmod>
@@ -21,12 +42,6 @@
     <lastmod>2025-04-20T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://serket-cybersecurity.fr/categories/pentest/</loc>
-    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://serket-cybersecurity.fr/posts/</loc>
-    <lastmod>2025-04-20T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://serket-cybersecurity.fr/tags/</loc>
     <lastmod>2025-04-20T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://serket-cybersecurity.fr/pages/a-propos/about/</loc>

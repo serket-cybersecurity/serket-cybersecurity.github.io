@@ -6,7 +6,149 @@
         <description>Recent content in Posts on Serket Cybersecurity</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>fr-FR</language>
-        <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 24 Aug 2025 00:00:00 +0200</lastBuildDate><atom:link href="https://serket-cybersecurity.fr/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Reconnaissance orientée Red Team</title>
+        <link>https://serket-cybersecurity.fr/posts/osint_redteam/reconnaissance-orient%C3%A9e-red-team/</link>
+        <pubDate>Sun, 24 Aug 2025 00:00:00 +0200</pubDate>
+        
+        <guid>https://serket-cybersecurity.fr/posts/osint_redteam/reconnaissance-orient%C3%A9e-red-team/</guid>
+        <description>&lt;img src="https://serket-cybersecurity.fr/osint_RedTeam/banner.jpg" alt="Featured image of post Reconnaissance orientée Red Team" /&gt;&lt;p&gt;Lors d&amp;rsquo;une opération Red Team, la reconnaissance est une étape déterminante. C’est durant cette phase que l’on dresse un portrait aussi complet que possible de la cible afin d’identifier les opportunités d’attaque, qu’elles soient techniques ou basées sur l’ingénierie sociale, dans l’objectif d’obtenir un accès initial.&lt;/p&gt;
+&lt;p&gt;Au-delà de la simple collecte d’informations, comprendre l’environnement et le fonctionnement de l’entreprise permet d’orienter efficacement les actions menées après la compromission, et de tracer les chemins les plus pertinents vers les « trophées » définis en amont.&lt;/p&gt;
+&lt;p&gt;Voici une liste des principaux types d’informations que je cherche habituellement à recueillir lors de cette phase de reconnaissance.&lt;/p&gt;
+&lt;p&gt;C&amp;rsquo;est parti ! 🚀&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;locaux-de-lentreprise&#34;&gt;&lt;a href=&#34;#locaux-de-lentreprise&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Locaux de l&amp;rsquo;entreprise
+&lt;/h2&gt;&lt;p&gt;L&amp;rsquo;identification d&amp;rsquo;informations sur les locaux d&amp;rsquo;une organisation est nécessaire en amont d&amp;rsquo;une intrusion physique. Ces informations peuvent aussi être utilisées dans le cadre d&amp;rsquo;attaques par ingénierie sociale afin d&amp;rsquo;aider à la construction d&amp;rsquo;un prétexte solide.&lt;/p&gt;
+&lt;p&gt;La plupart des informations listées ci-dessous peuvent être récupérées directement via des recherches en sources ouvertes, mais certaines peuvent parfois demander une phase de reconnaissance physique :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adresse(s)&lt;/li&gt;
+&lt;li&gt;Plans des locaux&lt;/li&gt;
+&lt;li&gt;Disposition des accès (entrée principale, porte fumeurs, entrée cuisines, entrepôts, etc.)&lt;/li&gt;
+&lt;li&gt;Présence/absence de personnel de sécurité&lt;/li&gt;
+&lt;li&gt;Localisation de l&amp;rsquo;accueil et agent d&amp;rsquo;accueil&lt;/li&gt;
+&lt;li&gt;Accueil régulier ou non de visiteurs / prestataires externes&lt;/li&gt;
+&lt;li&gt;Présence de caméras de surveillance&lt;/li&gt;
+&lt;li&gt;Localisation du local à poubelles&lt;/li&gt;
+&lt;li&gt;Identification de différentes zones (cantines / prestataires / industriel / entrepôts / administratif, etc.)&lt;/li&gt;
+&lt;li&gt;Systèmes de contrôle d&amp;rsquo;accès&lt;/li&gt;
+&lt;li&gt;Disposition de l&amp;rsquo;intérieur des bâtiments / bureaux (photos)&lt;/li&gt;
+&lt;li&gt;Accès parking&lt;/li&gt;
+&lt;li&gt;Présence de prises Ethernet / prises d’alimentation&lt;/li&gt;
+&lt;li&gt;Réseaux Wi-Fi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;situation-géographique&#34;&gt;&lt;a href=&#34;#situation-g%c3%a9ographique&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Situation géographique
+&lt;/h2&gt;&lt;p&gt;Avoir quelques éléments de contexte sur l&amp;rsquo;emplacement géographique global (sans besoin d&amp;rsquo;approfondir) est utile lors de la construction de prétextes, pour réagir rapidement lors des interactions avec les employés, ou pour prévoir de potentiels points de blocage lors d&amp;rsquo;une intrusion physique. Les éléments principaux auxquels je prête attention sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nom des entreprises voisines&lt;/li&gt;
+&lt;li&gt;Présence de travaux / événements proches&lt;/li&gt;
+&lt;li&gt;Possibilité de se garer (hors parking) / points d&amp;rsquo;observation&lt;/li&gt;
+&lt;li&gt;Restaurants / cafés&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;informations-techniques---périmètre-externe&#34;&gt;&lt;a href=&#34;#informations-techniques---p%c3%a9rim%c3%a8tre-externe&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Informations techniques - périmètre externe
+&lt;/h2&gt;&lt;p&gt;La reconnaissance technique est une part essentielle des opérations de reconnaissance. Elle va nous permettre de déterminer si l&amp;rsquo;exploitation d&amp;rsquo;une faille ou d&amp;rsquo;un service exposé est envisageable afin d&amp;rsquo;obtenir des informations ou un accès initial.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Domaines et sous-domaines&lt;/li&gt;
+&lt;li&gt;IP et ports exposés&lt;/li&gt;
+&lt;li&gt;Tenant Azure&lt;/li&gt;
+&lt;li&gt;Énumération de Blobs (AWS, Azure, etc.)&lt;/li&gt;
+&lt;li&gt;Accès VPN&lt;/li&gt;
+&lt;li&gt;Liste des technologies utilisées (logiciels, services, marques)&lt;/li&gt;
+&lt;li&gt;OS utilisé&lt;/li&gt;
+&lt;li&gt;Code exposé / Open Source (GitHub, GitLab, Bitbucket, etc.)&lt;/li&gt;
+&lt;li&gt;Suite bureautique (Office, Gmail, etc.)&lt;/li&gt;
+&lt;li&gt;Sites et services exposés (avec version)&lt;/li&gt;
+&lt;li&gt;Configuration mail&lt;/li&gt;
+&lt;li&gt;Caméras de surveillance accessibles depuis Internet&lt;/li&gt;
+&lt;li&gt;Serveurs accessibles depuis Internet et surface d&amp;rsquo;exposition excessive&lt;/li&gt;
+&lt;li&gt;Présence de systèmes de sécurité (WAF, firewall)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si certaines des informations listées ci-dessus peuvent être obtenues de manière passive via des recherches en sources ouvertes, elles ne peuvent souvent être confirmées ou approfondies qu&amp;rsquo;avec des actions actives. Dans ce cas, je préfère ajouter les éléments intéressants ou à vérifier à une liste spécifique, sur laquelle je reviendrai à la fin des phases de reconnaissance passive si besoin.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;entreprise---contexte-général&#34;&gt;&lt;a href=&#34;#entreprise---contexte-g%c3%a9n%c3%a9ral&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Entreprise - contexte général
+&lt;/h2&gt;&lt;p&gt;Recueillir des informations sur le contexte général de l&amp;rsquo;entreprise sert à se familiariser avec la cible afin de construire des prétextes et scénarios d&amp;rsquo;ingénierie sociale crédibles. Mais ce n&amp;rsquo;est pas la seule utilité : ces informations sont par exemple nécessaires pour établir des listes de bruteforce personnalisées, effectuer des recherches de vulnérabilités sur des logiciels utilisés en interne, etc.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Secteur d&amp;rsquo;activité&lt;/li&gt;
+&lt;li&gt;Historique&lt;/li&gt;
+&lt;li&gt;Liste de mots-clés&lt;/li&gt;
+&lt;li&gt;Syntaxe des emails&lt;/li&gt;
+&lt;li&gt;Organisation et lien avec d&amp;rsquo;autres filiales&lt;/li&gt;
+&lt;li&gt;Chiffre d&amp;rsquo;affaires&lt;/li&gt;
+&lt;li&gt;Événements à venir ou passés&lt;/li&gt;
+&lt;li&gt;Offres d&amp;rsquo;emploi&lt;/li&gt;
+&lt;li&gt;Réseaux sociaux et exposition médiatique&lt;/li&gt;
+&lt;li&gt;Atmosphère de travail (corporate, détendue, avis sur l&amp;rsquo;entreprise, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fuites-de-données&#34;&gt;&lt;a href=&#34;#fuites-de-donn%c3%a9es&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Fuites de données
+&lt;/h2&gt;&lt;p&gt;Les fuites de données peuvent parfois représenter une route simple et toute tracée vers un accès initial, sans besoin de scénario compliqué. Cela vaut toujours le coup de relever des identifiants à tester sur des accès VPN (sait-on jamais). Plus généralement, les fuites de documents ou emails internes peuvent contenir une mine d&amp;rsquo;informations exploitables par la suite.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Emails&lt;/li&gt;
+&lt;li&gt;Documents&lt;/li&gt;
+&lt;li&gt;Signatures&lt;/li&gt;
+&lt;li&gt;Mots de passe&lt;/li&gt;
+&lt;li&gt;Contacts&lt;/li&gt;
+&lt;li&gt;Plans / photos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;partenaires-et-prestataires&#34;&gt;&lt;a href=&#34;#partenaires-et-prestataires&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Partenaires et prestataires
+&lt;/h2&gt;&lt;p&gt;Sans besoin d&amp;rsquo;approfondir à l&amp;rsquo;extrême, relever les noms de différents prestataires, et si possible des points de contact, permet d&amp;rsquo;élaborer des scénarios d&amp;rsquo;ingénierie sociale crédibles.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Informatique (web, imprimantes, logiciels utilisés, etc.)&lt;/li&gt;
+&lt;li&gt;Cuisines&lt;/li&gt;
+&lt;li&gt;Climatisation / chauffage&lt;/li&gt;
+&lt;li&gt;Ascenseurs&lt;/li&gt;
+&lt;li&gt;Ménage&lt;/li&gt;
+&lt;li&gt;Architecture et bâtiments&lt;/li&gt;
+&lt;li&gt;Comptabilité&lt;/li&gt;
+&lt;li&gt;Cabinets de conseil / services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;employés-et-contact&#34;&gt;&lt;a href=&#34;#employ%c3%a9s-et-contact&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Employés et contact
+&lt;/h2&gt;&lt;p&gt;Élément nécessaire des attaques par phishing, vishing, smishing et autres, établir une liste de contacts internes est un incontournable de la phase de reconnaissance. Une recherche sur l&amp;rsquo;organigramme, les employés et la vie en entreprise aide notamment dans les scénarios d&amp;rsquo;ingénierie sociale. Attention cependant à ne pas sortir du cadre professionnel lors des recherches sur les réseaux sociaux et les employés.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Liste des employés (noms, prénoms, poste)&lt;/li&gt;
+&lt;li&gt;Liste des adresses e-mail des employés&lt;/li&gt;
+&lt;li&gt;Numéros de téléphone des employés&lt;/li&gt;
+&lt;li&gt;Numéro de téléphone de l&amp;rsquo;accueil&lt;/li&gt;
+&lt;li&gt;Adresses e-mail de listes de diffusion (RH, contact, recrutement, support, etc.)&lt;/li&gt;
+&lt;li&gt;Organigramme et identification des HVT&lt;/li&gt;
+&lt;li&gt;Port d’EPI&lt;/li&gt;
+&lt;li&gt;Tenue de travail / dress code&lt;/li&gt;
+&lt;li&gt;Moyenne d&amp;rsquo;âge des employés&lt;/li&gt;
+&lt;li&gt;Port du badge&lt;/li&gt;
+&lt;li&gt;Détail du badge&lt;/li&gt;
+&lt;li&gt;Niveau de langue utilisé en interne (tutoiement, vouvoiement, etc.)&lt;/li&gt;
+&lt;li&gt;Sites et services externes sur lesquels sont enregistrées les adresses e-mail professionnelles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;La phase de reconnaissance constitue le socle sur lequel repose toute opération Red Team. Plus elle est riche et précise, plus les scénarios d’attaque gagnent en crédibilité et en efficacité. Qu’il s’agisse d’exploiter une faille technique, de préparer une intrusion physique ou de construire un prétexte d’ingénierie sociale, chaque information collectée peut faire la différence. C’est un travail minutieux, mais qui conditionne souvent le succès des étapes suivantes.
+La liste ci-dessus se veut générique, en fonction du contexte dans lequel vous évoluez, d&amp;rsquo;autres éléments et informations peuvent être intéressantes à creuser. En espérant que cela fournisse tout de même un bon point de départ pour vos investigations !&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://serket-cybersecurity.fr/osint_RedTeam/investigate.jpeg#article&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Always sunny&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sources--ressources&#34;&gt;&lt;a href=&#34;#sources--ressources&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Sources &amp;amp; Ressources
+&lt;/h3&gt;&lt;p&gt;Vous cherchez des ressources pour en savoir plus sur l&amp;rsquo;OSINT orienté Red Team ? Voici une petite sélection :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://nostarch.com/practical-social-engineering&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Practical Social Engineering : A Primer for the Ethical Hacker - by Joe Gray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://inteltechniques.com/book1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSINT Techniques - Resources for Uncovering Online Information - by  Michael Bazzell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vous retrouverez aussi plein de ressources et outils sur le site de la communauté &lt;a class=&#34;link&#34; href=&#34;https://osintfr.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSINT-FR&lt;/a&gt; !&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Environnement de Pentest sous MacOS</title>
         <link>https://serket-cybersecurity.fr/posts/pentestenv/environnement-de-pentest-sous-macos/</link>
         <pubDate>Sun, 20 Apr 2025 00:00:00 +0200</pubDate>
